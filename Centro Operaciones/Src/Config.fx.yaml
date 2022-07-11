@@ -95,10 +95,12 @@ Config As screen:
             FocusedBorderThickness: =0
             Height: =100
             HoverFill: =RGBA(0, 0, 0, 0.1)
-            OnSelect: |-
-                =If( Connection.Connected,
-                UpdateContext({varConfig: ThisItem.Title}),
-                Notify("Sin conexión para agregar administradores",NotificationType.Error,2000))
+            OnSelect: |
+                =If( ThisItem.Title = "Administradores",
+                    If( Connection.Connected,
+                        UpdateContext({varConfig: ThisItem.Title}),
+                        Notify("Sin conexión para agregar administradores",NotificationType.Error,2000)),
+                UpdateContext({varConfig: ThisItem.Title}))
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0

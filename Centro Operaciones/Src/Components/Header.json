@@ -58,7 +58,7 @@
         "Name": "bgHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 92,
+        "PublishOrderIndex": 93,
         "Rules": [
           {
             "Category": "Data",
@@ -291,7 +291,7 @@
         "Name": "bgOpacityHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 93,
+        "PublishOrderIndex": 94,
         "Rules": [
           {
             "Category": "Design",
@@ -506,7 +506,7 @@
         "Name": "lbHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 94,
+        "PublishOrderIndex": 95,
         "Rules": [
           {
             "Category": "Data",
@@ -862,7 +862,7 @@
         "Name": "logoHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 95,
+        "PublishOrderIndex": 96,
         "Rules": [
           {
             "Category": "Data",

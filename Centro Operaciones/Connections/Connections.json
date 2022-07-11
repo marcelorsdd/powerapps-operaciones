@@ -1,4 +1,21 @@
 {
+  "27c23aca-4680-4fd8-bc52-01d01d5446a9": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Power Apps para Fabricantes",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1551/1.0.1551.2693/powerappsforappmakers/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_powerappsforappmakers"
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppsparaFabricantes"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "27c23aca-4680-4fd8-bc52-01d01d5446a9"
+  },
   "5c39e507-0bcd-4318-b765-2125609e66a1": {
     "connectionParameters": {
       "sku": "Enterprise"
