@@ -3,10 +3,10 @@ Start As screen:
     Width: =Max(App.Width)
 
     Image3 As image:
-        Height: =1136
+        Height: =Parent.Height
         Image: =control_center_in_a_farm_machine
         ImagePosition: =ImagePosition.Fill
-        Width: =640
+        Width: =Parent.Width
         ZIndex: =1
 
     Rectangle2 As rectangle:
