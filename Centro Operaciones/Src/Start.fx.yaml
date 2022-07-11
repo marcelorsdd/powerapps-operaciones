@@ -11,8 +11,8 @@ Start As screen:
 
     Rectangle2 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.5)
-        Height: =Max(App.Height)
-        Width: =Max(App.Width)
+        Height: =Parent.Height
+        Width: =Parent.Width
         ZIndex: =2
 
     Image6 As image:
@@ -175,7 +175,8 @@ Start As screen:
         Tooltip: ="Empezar"
         Visible: =If( !IsBlank(UserData), true, false)
         Width: =440
-        Y: =639
+        X: =100
+        Y: =399
         ZIndex: =8
 
     Icon4 As icon.Leave:
