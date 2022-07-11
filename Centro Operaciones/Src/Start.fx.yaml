@@ -64,7 +64,7 @@ Start As screen:
     Button3 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =1
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =If( Connection.Connected, RGBA(0, 0, 0, 1), RGBA(255, 255, 255, 1))
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Fill: =If(Connection.Connected, RGBA(137, 211, 41, 1), RGBA(211, 15, 75, 1))
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
@@ -86,17 +86,20 @@ Start As screen:
             
                 /*Coleção dados Usuário*/
                 ClearCollect(UserImage, UsuáriosdoOffice365.UserPhotoV2(UsuáriosdoOffice365.MyProfileV2().id));
-                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() }, { DataTime: Set(varDataTime, Now()) } );
+                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() });
+                ClearCollect(DataTime, { DataTime: Now() });
             
                 /*Salvar Local*/
                 SaveData(UserImage,"UserDataImage");
-                SaveData(UserData,"UserDataLocal"), 
+                SaveData(UserData,"UserDataLocal");
+                SaveData(DataTime,"DataTimeLocal"), 
             
-                /*Valor If False*/
+                /*-------------------------- Valor If False --------------------------*/
                 
                 /*Carregar dados Locais*/
                 LoadData(UserImage,"UserDataImage");
-                LoadData(UserData,"UserDataLocal")
+                LoadData(UserData,"UserDataLocal");
+                LoadData(DataTime,"DataTimeLocal")
             );
             
             Navigate(Home,ScreenTransition.Fade)

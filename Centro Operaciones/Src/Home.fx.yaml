@@ -149,7 +149,7 @@ Home As screen:
         Height: =30
         PaddingLeft: =10
         Text: |
-            ="No estás conectado, los datos cargados en " & Text(varDataTime, "dd/mm/yyyy hh:mm") 
+            ="No estás conectado, los datos cargados en " & Text(First(DataTime).DataTime, "dd/mm/yyyy hh:mm") 
         Visible: =If( Connection.Connected, false, true )
         Width: =Parent.Width
         ZIndex: =16
