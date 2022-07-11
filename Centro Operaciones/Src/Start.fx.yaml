@@ -1,6 +1,6 @@
 Start As screen:
-    Height: =Max(App.Height,App.DesignHeight)
-    Width: =Max(App.Width,App.DesignWidth)
+    Height: =1920
+    Width: =1080
 
     Image3 As image:
         Height: =Parent.Height
@@ -16,9 +16,11 @@ Start As screen:
         ZIndex: =2
 
     Image6 As image:
+        Height: =250
         Image: =BayerLogo
+        Width: =250
         X: =22
-        Y: =1008
+        Y: =1641
         ZIndex: =3
 
     Label1_2 As label:
@@ -26,12 +28,12 @@ Start As screen:
         Color: =RGBA(255, 255, 255, 1)
         Font: =Font.Lato
         FontWeight: =FontWeight.Bold
-        Height: =124
-        Size: =35
+        Height: =214
+        Size: =70
         Text: ="Centro de Operaciones"
-        Width: =453
-        X: =94
-        Y: =37
+        Width: =743
+        X: =170
+        Y: =146
         ZIndex: =4
 
     Label1_3 As label:
@@ -43,7 +45,9 @@ Start As screen:
         Fill: =If(Connection.Connected, RGBA(209, 232, 178, 1),RGBA(255, 194, 194, 1))
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =63
         PaddingLeft: =10
+        Size: =26
         Text: |-
             =If(
                 Connection.Connected && !IsBlank(UserData),
@@ -68,7 +72,7 @@ Start As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
-        Height: =If(varDadosCarregados, 50,80)
+        Height: =146
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =ColorFade(Self.Fill, -25%) 
         OnSelect: |-
@@ -124,9 +128,9 @@ Start As screen:
                     "Cargar datos"
                 )
             )
-        Width: =If(varDadosCarregados, 216, 395)
-        X: =If(varDadosCarregados,212,123)
-        Y: =If(varDadosCarregados,931,300)
+        Width: =767
+        X: =156
+        Y: =710
         ZIndex: =6
 
     Label2_1 As label:
@@ -157,7 +161,7 @@ Start As screen:
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Bold
-        Height: =73
+        Height: =225
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =Self.Color
         HoverFill: =ColorFade(Self.Fill, -25%) 
@@ -175,19 +179,19 @@ Start As screen:
         Tooltip: ="Empezar"
         Visible: =If( !IsBlank(UserData), true, false)
         Width: =440
-        X: =122
-        Y: =669
+        X: =319
+        Y: =905
         ZIndex: =8
 
     Icon4 As icon.Leave:
         AccessibleLabel: ="Sair"
         Color: =RGBA(255, 255, 255, 1)
-        Height: =50
+        Height: =100
         Icon: =Icon.Leave
         OnSelect: =Exit()
         Tooltip: ="Salir"
-        Width: =50
+        Width: =100
         X: =22
-        Y: =56
+        Y: =89
         ZIndex: =9
 
