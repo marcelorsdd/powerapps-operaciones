@@ -58,7 +58,7 @@
         "Name": "bgHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 111,
+        "PublishOrderIndex": 256,
         "Rules": [
           {
             "Category": "Data",
@@ -291,7 +291,7 @@
         "Name": "bgOpacityHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 112,
+        "PublishOrderIndex": 257,
         "Rules": [
           {
             "Category": "Design",
@@ -506,7 +506,7 @@
         "Name": "lbHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 113,
+        "PublishOrderIndex": 258,
         "Rules": [
           {
             "Category": "Data",
@@ -862,7 +862,7 @@
         "Name": "logoHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 114,
+        "PublishOrderIndex": 259,
         "Rules": [
           {
             "Category": "Data",
@@ -1072,7 +1072,7 @@
       "ZIndex",
       "HeaderTitle"
     ],
-    "LastModifiedTimestamp": "637931619885568846",
+    "LastModifiedTimestamp": "637931627710412667",
     "Name": "Header",
     "Rules": [
       {
@@ -1147,7 +1147,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637931619885568846",
+  "LastModifiedTimestamp": "637931627710412667",
   "Name": "27e6029c92a74baeb099cf413202f6fd",
   "OverridableProperties": {},
   "Version": "637927121847133305"

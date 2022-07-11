@@ -1,4 +1,29 @@
 {
+  "21b1682d-59df-4b16-8177-0371279d14bd": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1578/1.0.1578.2813/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {
+      "https://bayergroup.sharepoint.com/sites/CENTRODEOPERACIONESMAQ-CAM-VHO": {
+        "dataSources": {
+          "CO-VHO-Control de combustible": {
+            "tableName": "fab477e9-c14c-4625-8890-9db133ee0966"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CO-VHO-Control de combustible"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "21b1682d-59df-4b16-8177-0371279d14bd"
+  },
   "27c23aca-4680-4fd8-bc52-01d01d5446a9": {
     "connectionParameters": {
       "sku": "Enterprise"

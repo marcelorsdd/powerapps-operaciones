@@ -51,7 +51,7 @@
         "Name": "Rectangle3",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 115,
+        "PublishOrderIndex": 260,
         "Rules": [
           {
             "Category": "Design",
@@ -207,7 +207,7 @@
         "Name": "Image12",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 116,
+        "PublishOrderIndex": 261,
         "Rules": [
           {
             "Category": "Data",
@@ -485,7 +485,7 @@
         "Name": "Label2",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 117,
+        "PublishOrderIndex": 262,
         "Rules": [
           {
             "Category": "Data",
@@ -762,7 +762,7 @@
       "ZIndex",
       "Timer"
     ],
-    "LastModifiedTimestamp": "637931619885717907",
+    "LastModifiedTimestamp": "637931627710515137",
     "Name": "Loading",
     "Rules": [
       {
@@ -837,7 +837,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637931619885717907",
+  "LastModifiedTimestamp": "637931627710515137",
   "Name": "b19407e7d00f463ab6b308febf32a1f8",
   "OverridableProperties": {},
   "Version": "637928887164903821"

@@ -35,13 +35,47 @@ ListDetails As screen:
         ZIndex: =7
 
     Gallery3 As gallery.galleryVertical:
-        Height: =880
+        Height: =843
+        Items: ='CO-VHO-Control de combustible'
         Layout: =Layout.Vertical
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        ShowScrollbar: =false
+        TemplateSize: =46
         Width: =591
         X: =25
-        Y: =132
+        Y: =168
         ZIndex: =13
+
+        Label4 As label:
+            Align: =Align.Center
+            Font: =Font.'Lato Light'
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.ID
+            Width: =35
+            ZIndex: =1
+
+        Label4_1 As label:
+            Align: =Align.Center
+            Font: =Font.'Lato Light'
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.'3. Temporada'.Value
+            Width: =104
+            X: =40
+            ZIndex: =2
+
+        Icon6 As icon.ChevronRight:
+            Height: =35
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            Width: =35
+            X: =539
+            Y: =6
+            ZIndex: =4
 
     Group6_3 As group:
         Height: =5
@@ -112,4 +146,57 @@ ListDetails As screen:
             X: =414
             Y: =1058
             ZIndex: =12
+
+    Icon7 As icon.ArrowsUpDown:
+        Height: =40
+        Icon: =Icon.Sort
+        Width: =40
+        X: =527
+        Y: =113
+        ZIndex: =14
+
+    Icon9 As icon.Add:
+        Height: =40
+        Icon: =Icon.Add
+        Width: =40
+        X: =576
+        Y: =113
+        ZIndex: =15
+
+    Icon7_1 As icon.ArrowsUpDown:
+        Height: =40
+        Icon: =Icon.Reload
+        Width: =40
+        X: =478
+        Y: =113
+        ZIndex: =16
+
+    TextInput1_1 As text:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderThickness: =1
+        Color: =RGBA(18, 49, 78, 1)
+        Default: =""
+        DisabledColor: =RGBA(18, 49, 78, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Lato Light'
+        Height: =50
+        HintText: ="Buscar"
+        HoverBorderColor: =RGBA(204, 204, 204, 1)
+        HoverColor: =RGBA(18, 49, 78, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Size: =21
+        Width: =438
+        X: =25
+        Y: =108
+        ZIndex: =17
+
+    Image4_1 As image:
+        Height: =35
+        Image: |-
+            ="data:image/svg+xml;utf8, "&EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='#000000' viewBox='0 0 256 256'><rect width='256' height='256' fill='none'></rect><circle cx='116' cy='116' r='84' fill='none' stroke='#999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'></circle><line x1='175.4' y1='175.4' x2='224' y2='224' fill='none' stroke='#999999' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'></line></svg>")
+        Tooltip: ="Buscar"
+        Width: =35
+        X: =414
+        Y: =116
+        ZIndex: =18
 

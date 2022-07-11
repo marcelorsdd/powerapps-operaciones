@@ -121,7 +121,7 @@ Home As screen:
             RadiusTopRight: =Image1.Width
             Width: =(Max(App.Width, App.MinScreenHeight)) - (Max(App.Width, App.MinScreenHeight) - 150)
             X: =472
-            Y: =49
+            Y: =52
             ZIndex: =6
 
         Label1 As label:
