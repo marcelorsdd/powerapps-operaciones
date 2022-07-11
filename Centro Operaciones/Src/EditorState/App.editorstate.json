@@ -3,22 +3,8 @@
     "App": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "1136",
-          "InvariantPropertyName": "MinScreenHeight",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "640",
-          "InvariantPropertyName": "MinScreenWidth",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "MinScreenHeight",
+        "MinScreenWidth",
         "ConfirmExit",
         "SizeBreakpoints",
         "BackEnabled",
