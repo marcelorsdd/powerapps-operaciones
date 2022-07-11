@@ -19,7 +19,7 @@ Start As screen:
     Image6 As image:
         Image: =BayerLogo
         X: =22
-        Y: =1020
+        Y: =1008
         ZIndex: =3
 
     Label1_2 As label:
@@ -49,14 +49,13 @@ Start As screen:
         Text: |-
             =If(
                 Connection.Connected && !IsBlank(UserData),
-                "Estás conectado! Cargue los datos para iniciar la aplicación.",
+                "Estás conectado, comienza con los datos del servidor.",
                 If(
                     !Connection.Connected && IsBlank(UserData),
-                    "No estás conectado, busca un lugar con conexión para cargar los datos!",
+                    "No estás conectado, comienza con datos locales!",
                     ""
                 )
             )
-        Visible: =!varDadosCarregados
         Width: =Parent.Width
         ZIndex: =5
 
@@ -65,22 +64,19 @@ Start As screen:
         BorderThickness: =1
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(137, 211, 41, 1)
+        Fill: =If(Connection.Connected, RGBA(137, 211, 41, 1), RGBA(211, 15, 75, 1))
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
-        Height: =76
+        Height: =75
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =ColorFade(Self.Fill, -25%) 
         OnSelect: |-
-            =Set(varDadosCarregados,true);
-            Notify(
+            =Notify(
                 "Los datos se cargaron correctamente!",
                 NotificationType.Success,
-                3000
+                2000
             );
-            Set(varDataCarregamento,Now());
-            
             
             /*CARREGAR DADOS USUÁRIO*/
             If(
@@ -88,16 +84,20 @@ Start As screen:
             
                 /*Coleção dados Usuário*/
                 ClearCollect(UserImage, UsuáriosdoOffice365.UserPhotoV2(UsuáriosdoOffice365.MyProfileV2().id));
-                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() }, { DataTime: Now() } );
+                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() }, { DataTime: Set(varDataTime, Now()) } );
             
                 /*Salvar Local*/
                 SaveData(UserImage,"UserDataImage");
                 SaveData(UserData,"UserDataLocal"), 
             
+                /*Valor If False*/
+                
                 /*Carregar dados Locais*/
                 LoadData(UserImage,"UserDataImage");
                 LoadData(UserData,"UserDataLocal")
-            )
+            );
+            
+            Navigate(Home,ScreenTransition.Fade)
         PressedBorderColor: =ColorFade(RGBA(137, 211, 41, 1), -50%)
         PressedColor: =Black
         PressedFill: =ColorFade(Self.Fill, -15%)
@@ -105,34 +105,12 @@ Start As screen:
         RadiusBottomRight: =60
         RadiusTopLeft: =60
         RadiusTopRight: =60
-        Size: =If(varDadosCarregados, 15,20)
-        Text: |-
-            =If(
-                !Connection.Connected && IsBlank(UserData),
-                "Sin conexión",
-                If(
-                    Connection.Connected && !IsBlank(UserData),
-                    "Cargar datos más recientes",
-                    If(
-                        varDadosCarregados,
-                        "Recargar datos",
-                        "Cargar datos"
-                    )
-                )
-            )
-        Tooltip: |-
-            =If(
-                !Connection.Connected,
-                "Sin conexión",
-                If(
-                    varDadosCarregados,
-                    "Recargar datos",
-                    "Cargar datos"
-                )
-            )
+        Size: =20
+        Text: ="Iniciar sesión"
+        Tooltip: =
         Width: =333
-        X: =153
-        Y: =595
+        X: =154
+        Y: =355
         ZIndex: =6
 
     Label2_1 As label:
@@ -147,43 +125,11 @@ Start As screen:
         Height: =72
         Size: =11.5
         Text: |-
-            ="Datos cargados en " & Text(First(UserData.DataTime).DataTime, "dd/mm/yyy hh:mm") & " Las operaciones ahora funcionarán sin conexión."
-        Visible: =varDadosCarregados
+            ="Datos cargados en " & Text(varDataTime, "dd/mm/yyy hh:mm") & " Las operaciones ahora funcionarán sin conexión."
         Width: =300
         X: =170
         Y: =995
         ZIndex: =7
-
-    Button3_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =1
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        Fill: =RGBA(0, 188, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FocusedBorderThickness: =2
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =69
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =Self.Color
-        HoverFill: =ColorFade(Self.Fill, -25%) 
-        OnSelect: =Navigate(Home)
-        PressedBorderColor: =ColorFade(RGBA(0, 188, 255, 1), -50%)
-        PressedColor: |
-            =Self.Color
-        PressedFill: =ColorFade(Self.Fill, -15%)
-        RadiusBottomLeft: =70
-        RadiusBottomRight: =70
-        RadiusTopLeft: =70
-        RadiusTopRight: =70
-        Size: =20
-        Text: ="Empezar"
-        Tooltip: ="Empezar"
-        Visible: =If( !IsBlank(UserData), true, false)
-        Width: =440
-        X: =100
-        Y: =359
-        ZIndex: =8
 
     Icon4 As icon.Leave:
         AccessibleLabel: ="Sair"
@@ -196,4 +142,15 @@ Start As screen:
         X: =22
         Y: =47
         ZIndex: =9
+
+    Icon3 As icon.TrendingUpwards:
+        Color: =If( Connection.Connected, RGBA(137, 211, 41, 1) , RGBA(211, 15, 75, 1)) 
+        DisabledColor: =Icon3.Color
+        DisplayMode: =DisplayMode.Disabled
+        Height: =40
+        Icon: =Icon.TrendingUpwards
+        Width: =40
+        X: =577
+        Y: =47
+        ZIndex: =10
 
