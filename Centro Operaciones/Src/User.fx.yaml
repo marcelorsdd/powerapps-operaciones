@@ -82,7 +82,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =First(UserData).displayName
+        Text: =First(UserData.MyProfile).MyProfile.displayName
         Width: =560
         X: =41
         Y: =351
@@ -93,7 +93,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =First(UserData).jobTitle
+        Text: =First(UserData.MyProfile).MyProfile.jobTitle
         Width: =560
         X: =41
         Y: =421
@@ -104,7 +104,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =First(UserData).department
+        Text: =First(UserData).MyProfile.department
         Width: =560
         X: =41
         Y: =491

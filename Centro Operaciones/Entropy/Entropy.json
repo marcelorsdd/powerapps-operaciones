@@ -119,7 +119,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/11/2022 14:05:24",
+  "HeaderLastSavedDateTimeUTC": "07/11/2022 14:25:26",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "5c39e507-0bcd-4318-b765-2125609e66a1": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/9487e0d14a834ec3a26e33c6a98232a3\""
@@ -154,8 +154,8 @@
     "CustomGallerySample": 1,
     "DropDownSample": 3,
     "Operaciones": 4,
-    "UserData": 7,
-    "UserImage": 6,
+    "UserData": 6,
+    "UserImage": 7,
     "UsuáriosdoOffice365": 0
   },
   "OrderGroupControls": {

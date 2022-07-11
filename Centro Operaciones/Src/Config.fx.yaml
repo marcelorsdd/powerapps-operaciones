@@ -1,6 +1,8 @@
 Config As screen:
     OnVisible: |-
-        =UpdateContext({varConfig: "Administradores"})
+        =If( Connection.Connected,
+        UpdateContext({varConfig: "Administradores"}),
+        UpdateContext({varConfig: "Áreas"}))
 
     Image10 As image:
         Height: =1051
@@ -85,6 +87,7 @@ Config As screen:
 
         button As button:
             BorderThickness: =0
+            DisplayMode: =If( Connection.Connected, DisplayMode.Edit, DisplayMode.Disabled)
             Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =0
             Height: =100
@@ -154,12 +157,14 @@ Config As screen:
         Height: =50
         HoverFill: =RGBA(255, 255, 255, 1)
         InputTextPlaceholder: ="Usuario"
-        Items: |-
-            =UsuáriosdoOffice365.SearchUser({searchTerm:cbUsuario.SearchText})
+        IsSearchable: =false
+        Items: |
+            =If( Connection.Connected,
+            UsuáriosdoOffice365.SearchUser({searchTerm:cbUsuario.SearchText}),
+            ["Sin conexión"])
         PressedFill: =RGBA(0, 188, 255, 1)
-        SearchFields: =["Mail"]
-        SearchItems: |-
-            =Search(UsuáriosdoOffice365.SearchUser({searchTerm:cbUsuario.SearchText}),cbUsuario.SearchText,"Mail")
+        SearchFields: =["City"]
+        SearchItems: =[]
         SelectionFill: =ColorFade(RGBA(0, 188, 255, 1), -20%)
         SelectMultiple: =false
         Size: =18

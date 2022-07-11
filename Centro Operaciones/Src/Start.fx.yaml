@@ -89,7 +89,7 @@ Start As screen:
             
                 /*Coleção dados Usuário*/
                 ClearCollect(UserImage, UsuáriosdoOffice365.UserPhotoV2(UsuáriosdoOffice365.MyProfileV2().id));
-                ClearCollect(UserData, UsuáriosdoOffice365.MyProfileV2());
+                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() }, { SearchUser: UsuáriosdoOffice365.SearchUser({searchTerm:cbUsuario.SearchText})});
             
                 /*Salvar Local*/
                 SaveData(UserImage,"UserDataImage");
