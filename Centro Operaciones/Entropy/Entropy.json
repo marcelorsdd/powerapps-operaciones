@@ -120,7 +120,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "07/11/2022 13:37:14",
+  "HeaderLastSavedDateTimeUTC": "07/11/2022 13:38:23",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "5c39e507-0bcd-4318-b765-2125609e66a1": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/9487e0d14a834ec3a26e33c6a98232a3\""
@@ -227,8 +227,8 @@
     "Button2_2": 64,
     "Button2_3": 74,
     "Button2_4": 91,
-    "Button3": 6,
-    "Button3_1": 7,
+    "Button3": 5,
+    "Button3_1": 6,
     "cbUsuario": 42,
     "Componet_Loading": 33,
     "Config": 0,
@@ -299,7 +299,7 @@
     "Label1_3": 2,
     "Label1_4": 78,
     "Label2": 99,
-    "Label2_1": 5,
+    "Label2_1": 7,
     "Label3": 83,
     "Label3_1": 84,
     "Label3_2": 85,
