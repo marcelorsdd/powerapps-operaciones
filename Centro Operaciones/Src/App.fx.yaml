@@ -1,0 +1,95 @@
+App As appinfo:
+    BackEnabled: =false
+    MinScreenHeight: =1136
+    OnStart: |-
+        =ClearCollect(
+            Operaciones,
+            {
+                Title: "Control de combustible",
+                Categories: "Custos"
+            },
+            {
+                Title: "Inventario de maquinaria e implementos",
+                Categories: "Inventario"
+            },
+            {
+                Title: "Configuración e identificación de Lotes",
+                Categories: "Inventario"
+            },
+            {
+                Title: "Inventario de rodados",
+                Categories: "Inventario"
+            },
+            {
+                Title: "Aplicación de agroquímicos",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Compactación de suelo",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Cosecha",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Desespigue",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Labranza y preparación",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Limpieza acero",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Manejo de cultivo",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Muestreo de suelo",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Siembra",
+                Categories: "Actividades"
+            },
+            {
+                Title: "Condiciones operativas de maquinaria agrícola",
+                Categories: "Inpencacion"
+            },
+            {
+                Title: "Mantenimiento preventivo por horas maquinaria agrícola",
+                Categories: "Inpencacion"
+            },
+            {
+                Title: "Productividad semanal de maquinaria e implementos",
+                Categories: "KPI"
+            },
+            {
+                Title: "Registro de asistencia",
+                Categories: "Mantenimiento"
+            },
+            {
+                Title: "Reporte de fallas de maquinaria e implementos",
+                Categories: "Mantenimiento"
+            }
+        );
+        ClearCollect(
+            AdministratorMenu,
+            {
+                Title: "Administradores",
+                Icon: Icon.Person
+            },
+            {
+                Title: "Áreas",
+                Icon: Icon.Waypoint
+            },
+            {
+                Title: "Subárea",
+                Icon: Icon.Location
+            }
+        )
+

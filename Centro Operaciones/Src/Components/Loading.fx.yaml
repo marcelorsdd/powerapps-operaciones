@@ -1,0 +1,35 @@
+Loading As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =951
+    Timer: =100
+    Width: =Max(App.Width, App.MinScreenWidth)
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =951
+        Width: =640
+        ZIndex: =1
+
+    Image12 As image:
+        Height: =320
+        Image: ='Gif-loading-bayer'
+        Width: =320
+        X: =160
+        Y: =303
+        ZIndex: =2
+
+    Label2 As label:
+        Align: =Align.Center
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Carga de datos..."
+        Width: =560
+        X: =40
+        Y: =578
+        ZIndex: =3
+

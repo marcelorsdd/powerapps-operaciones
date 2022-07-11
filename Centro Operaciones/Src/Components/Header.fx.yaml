@@ -1,0 +1,47 @@
+Header As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    HeaderTitle: ="Texto"
+    Height: =85
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    bgHeader As image:
+        Height: =85
+        Image: =getsitelogo
+        ImagePosition: =ImagePosition.Fill
+        Width: =640
+        ZIndex: =1
+
+    bgOpacityHeader As rectangle:
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =85
+        Width: =640
+        ZIndex: =2
+
+    logoHeader As image:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Image: =BayerLogo
+        RadiusBottomLeft: =360
+        RadiusBottomRight: =360
+        RadiusTopLeft: =360
+        RadiusTopRight: =360
+        Width: =60
+        X: =9
+        Y: =12
+        ZIndex: =3
+
+    lbHeader As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Bold
+        Height: =85
+        Size: =30
+        Text: =Header.HeaderTitle
+        Width: =453
+        X: =94
+        ZIndex: =4
+
