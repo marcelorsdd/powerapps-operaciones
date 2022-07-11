@@ -87,7 +87,10 @@ Config As screen:
 
         button As button:
             BorderThickness: =0
-            DisplayMode: =If( Connection.Connected, DisplayMode.Edit, DisplayMode.Disabled)
+            DisplayMode: |-
+                =If( ThisItem.Title = "Administradores",
+                If( Connection.Connected, DisplayMode.Edit, DisplayMode.Disabled),
+                DisplayMode.Edit)
             Fill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =0
             Height: =100
@@ -214,7 +217,9 @@ Config As screen:
         OnSelect: |-
             =/*Administradores*/
             If(
+                If( Connection.Connected,
                 varConfig = "Administradores",
+            
                 If(
                     !IsBlank(cbUsuario.Selected) And !IsBlank(dpCategoria.SelectedText),
                     Notify(
@@ -226,8 +231,10 @@ Config As screen:
                         "Rellene todo el campo para agregar admin",
                         NotificationType.Error,
                         2000
-                    )
-                ),
+                    ), 
+                    ""
+                )),
+            
             /*Áreas*/
                 If(
                     varConfig = "Áreas",
