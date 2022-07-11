@@ -1,6 +1,5 @@
 App As appinfo:
-    BackEnabled: =true
-    ConfirmExit: =true
+    BackEnabled: =false
     MinScreenHeight: =1920
     MinScreenWidth: =1080
     OnStart: |-

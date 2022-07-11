@@ -79,7 +79,7 @@
     "DocumentLayoutLockOrientation": true,
     "DocumentLayoutMaintainAspectRatio": false,
     "DocumentLayoutOrientation": "portrait",
-    "DocumentLayoutScaleToFit": false,
+    "DocumentLayoutScaleToFit": true,
     "DocumentLayoutWidth": 640,
     "DocumentType": "App",
     "EnableInstrumentation": false,
