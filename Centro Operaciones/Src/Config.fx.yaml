@@ -87,6 +87,9 @@ Config As screen:
 
         button As button:
             BorderThickness: =0
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
             DisplayMode: |-
                 =If( ThisItem.Title = "Administradores",
                 If( Connection.Connected, DisplayMode.Edit, DisplayMode.Disabled),
