@@ -88,7 +88,7 @@ Start As screen:
             
                 /*Coleção dados Usuário*/
                 ClearCollect(UserImage, UsuáriosdoOffice365.UserPhotoV2(UsuáriosdoOffice365.MyProfileV2().id));
-                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() });
+                ClearCollect(UserData, { MyProfile: UsuáriosdoOffice365.MyProfileV2() }, { DataTime: Now() } );
             
                 /*Salvar Local*/
                 SaveData(UserImage,"UserDataImage");
@@ -132,7 +132,7 @@ Start As screen:
             )
         Width: =333
         X: =153
-        Y: =445
+        Y: =595
         ZIndex: =6
 
     Label2_1 As label:
@@ -147,7 +147,7 @@ Start As screen:
         Height: =72
         Size: =11.5
         Text: |-
-            ="Datos cargados en " & Text(varDataCarregamento, "dd/mm/yyy hh:mm") & " Las operaciones ahora funcionarán sin conexión."
+            ="Datos cargados en " & Text(First(UserData.DataTime).DataTime, "dd/mm/yyy hh:mm") & " Las operaciones ahora funcionarán sin conexión."
         Visible: =varDadosCarregados
         Width: =300
         X: =170
