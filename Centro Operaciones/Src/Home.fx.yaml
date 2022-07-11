@@ -167,7 +167,7 @@ Home As screen:
         Image7 As image:
             BorderColor: =RGBA(0, 188, 255, 1)
             Height: =64
-            Image: =UserData.Image
+            Image: =First(UserImage).Url
             ImagePosition: =ImagePosition.Fill
             RadiusBottomLeft: =Image7.Width
             RadiusBottomRight: =Image7.Width

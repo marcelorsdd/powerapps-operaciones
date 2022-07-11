@@ -82,17 +82,22 @@ Start As screen:
             );
             Set(varDataCarregamento,Now());
             
+            
+            /*CARREGAR DADOS USUÁRIO*/
             If(
                 Connection.Connected,
-                ClearCollect(UserData, {Image: User().Image });
-                SaveData(
-                    UserData,
-                    "UserDataLocal"
-                ),
-                LoadData(
-                    UserData,
-                    "UserDataLocal"
-                )
+            
+                /*Coleção dados Usuário*/
+                ClearCollect(UserImage, UsuáriosdoOffice365.UserPhotoV2(UsuáriosdoOffice365.MyProfileV2().id));
+                ClearCollect(UserData, UsuáriosdoOffice365.MyProfileV2());
+            
+                /*Salvar Local*/
+                SaveData(UserImage,"UserDataImage");
+                SaveData(UserData,"UserDataLocal"), 
+            
+                /*Carregar dados Locais*/
+                LoadData(UserImage,"UserDataImage");
+                LoadData(UserData,"UserDataLocal")
             )
         PressedBorderColor: =ColorFade(RGBA(137, 211, 41, 1), -50%)
         PressedColor: =Black

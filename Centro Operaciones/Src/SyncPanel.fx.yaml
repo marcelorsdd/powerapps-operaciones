@@ -65,7 +65,7 @@ SyncPanel As screen:
             BorderColor: =RGBA(0, 188, 255, 1)
             BorderThickness: =2
             Height: =64
-            Image: =
+            Image: =Image7.Image
             RadiusBottomLeft: =100
             RadiusBottomRight: =100
             RadiusTopLeft: =100

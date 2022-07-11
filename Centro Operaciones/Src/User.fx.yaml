@@ -71,7 +71,7 @@ User As screen:
 
     Image8 As image:
         Height: =200
-        Image: =UserData.Image
+        Image: =Image7.Image
         Width: =200
         X: =220
         Y: =135
@@ -82,7 +82,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =User().FullName
+        Text: =First(UserData).displayName
         Width: =560
         X: =41
         Y: =351
@@ -93,7 +93,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =UsuáriosdoOffice365.MyProfileV2().jobTitle
+        Text: =First(UserData).jobTitle
         Width: =560
         X: =41
         Y: =421
@@ -104,7 +104,7 @@ User As screen:
         Font: =Font.Lato
         Height: =70
         Size: =21
-        Text: =UsuáriosdoOffice365.MyProfileV2().department
+        Text: =First(UserData).department
         Width: =560
         X: =41
         Y: =491
@@ -141,7 +141,7 @@ User As screen:
             BorderColor: =RGBA(0, 188, 255, 1)
             BorderThickness: =2
             Height: =64
-            Image: =
+            Image: =Image7.Image
             RadiusBottomLeft: =100
             RadiusBottomRight: =100
             RadiusTopLeft: =100
