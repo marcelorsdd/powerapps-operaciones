@@ -17,9 +17,11 @@ Start As screen:
         ZIndex: =2
 
     Image6 As image:
+        Height: =300
         Image: =BayerLogo
-        X: =22
-        Y: =1008
+        Width: =300
+        X: =170
+        Y: =792
         ZIndex: =3
 
     Label1_2 As label:
@@ -48,10 +50,10 @@ Start As screen:
         PaddingLeft: =10
         Text: |-
             =If(
-                Connection.Connected && !IsBlank(UserData),
+                Connection.Connected,
                 "Estás conectado, comienza con los datos del servidor.",
                 If(
-                    !Connection.Connected && IsBlank(UserData),
+                    !Connection.Connected && !IsBlank(UserData),
                     "No estás conectado, comienza con datos locales!",
                     ""
                 )
@@ -108,28 +110,10 @@ Start As screen:
         Size: =20
         Text: ="Iniciar sesión"
         Tooltip: =
-        Width: =333
-        X: =154
+        Width: =394
+        X: =123
         Y: =355
         ZIndex: =6
-
-    Label2_1 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =72
-        Size: =11.5
-        Text: |-
-            ="Datos cargados en " & Text(varDataTime, "dd/mm/yyy hh:mm") & " Las operaciones ahora funcionarán sin conexión."
-        Width: =300
-        X: =170
-        Y: =995
-        ZIndex: =7
 
     Icon4 As icon.Leave:
         AccessibleLabel: ="Sair"

@@ -62,7 +62,7 @@ Home As screen:
 
     Rectangle1 As rectangle:
         Fill: =RGBA(0, 0, 0, 0.5)
-        Height: =256
+        Height: =255
         Width: =Parent.Width
         ZIndex: =5
 
@@ -121,7 +121,7 @@ Home As screen:
             RadiusTopRight: =Image1.Width
             Width: =(Max(App.Width, App.MinScreenHeight)) - (Max(App.Width, App.MinScreenHeight) - 150)
             X: =472
-            Y: =33
+            Y: =49
             ZIndex: =6
 
         Label1 As label:
@@ -134,8 +134,25 @@ Home As screen:
             Text: ="Centro de Operaciones"
             Width: =453
             X: =19
-            Y: =61
+            Y: =77
             ZIndex: =7
+
+    Label1_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 194, 194, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =30
+        PaddingLeft: =10
+        Text: |
+            ="No estás conectado, los datos cargados en " & Text(varDataTime, "dd/mm/yyyy hh:mm") 
+        Visible: =If( Connection.Connected, false, true )
+        Width: =Parent.Width
+        ZIndex: =16
 
     Group6 As group:
         Height: =5
