@@ -65,7 +65,6 @@ Start As screen:
         BorderThickness: =1
         Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisplayMode: =If(Connection.Connected,DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(137, 211, 41, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FocusedBorderThickness: =2
@@ -131,7 +130,7 @@ Start As screen:
                     "Cargar datos"
                 )
             )
-        Width: =223
+        Width: =333
         X: =154
         Y: =254
         ZIndex: =6
