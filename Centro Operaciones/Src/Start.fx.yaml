@@ -131,7 +131,7 @@ Start As screen:
                     "Cargar datos"
                 )
             )
-        Width: =332
+        Width: =223
         X: =154
         Y: =254
         ZIndex: =6
