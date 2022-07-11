@@ -131,8 +131,8 @@ Start As screen:
                 )
             )
         Width: =333
-        X: =153
-        Y: =174
+        X: =170
+        Y: =650
         ZIndex: =6
 
     Label2_1 As label:
