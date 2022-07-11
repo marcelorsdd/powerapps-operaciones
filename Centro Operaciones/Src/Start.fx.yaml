@@ -1,6 +1,6 @@
 Start As screen:
-    Height: =Max(App.Height)
-    Width: =Max(App.Width)
+    Height: =Max(App.Height,App.DesignHeight)
+    Width: =Max(App.Width,App.DesignWidth)
 
     Image3 As image:
         Height: =Parent.Height
