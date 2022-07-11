@@ -104,9 +104,10 @@
   "ScreenOrder": [
     "Start",
     "Home",
+    "ListDetails",
     "Config",
     "SyncPanel",
     "User",
-    "Home_2"
+    "Home_3"
   ]
 }

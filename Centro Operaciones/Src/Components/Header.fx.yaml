@@ -39,7 +39,7 @@ Header As CanvasComponent:
         Font: =Font.'Lato Light'
         FontWeight: =FontWeight.Bold
         Height: =85
-        Size: =30
+        Size: =24
         Text: =Header.HeaderTitle
         Width: =453
         X: =94

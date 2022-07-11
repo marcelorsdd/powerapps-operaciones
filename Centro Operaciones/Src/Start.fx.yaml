@@ -149,7 +149,7 @@ Start As screen:
         Height: =44
         Size: =16
         Text: |-
-            ="App Versión: " & _MyVersions
+            ="App Versión: " & First(DataVersion).Value
         Width: =170
         Y: =1092
         ZIndex: =12

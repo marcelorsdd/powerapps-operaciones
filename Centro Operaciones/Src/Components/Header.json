@@ -58,7 +58,7 @@
         "Name": "bgHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 94,
+        "PublishOrderIndex": 111,
         "Rules": [
           {
             "Category": "Data",
@@ -291,7 +291,7 @@
         "Name": "bgOpacityHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 95,
+        "PublishOrderIndex": 112,
         "Rules": [
           {
             "Category": "Design",
@@ -506,7 +506,7 @@
         "Name": "lbHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 96,
+        "PublishOrderIndex": 113,
         "Rules": [
           {
             "Category": "Data",
@@ -528,7 +528,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "30",
+            "InvariantScript": "24",
             "Property": "Size",
             "RuleProviderType": "Unknown"
           },
@@ -862,7 +862,7 @@
         "Name": "logoHeader",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 97,
+        "PublishOrderIndex": 114,
         "Rules": [
           {
             "Category": "Data",
@@ -1072,7 +1072,7 @@
       "ZIndex",
       "HeaderTitle"
     ],
-    "LastModifiedTimestamp": "637931370736292226",
+    "LastModifiedTimestamp": "637931614442029802",
     "Name": "Header",
     "Rules": [
       {
@@ -1147,7 +1147,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637931370736292226",
+  "LastModifiedTimestamp": "637931614442029802",
   "Name": "27e6029c92a74baeb099cf413202f6fd",
   "OverridableProperties": {},
   "Version": "637927121847133305"
