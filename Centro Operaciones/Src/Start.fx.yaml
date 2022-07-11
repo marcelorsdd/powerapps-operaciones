@@ -175,8 +175,8 @@ Start As screen:
         Tooltip: ="Empezar"
         Visible: =If( !IsBlank(UserData), true, false)
         Width: =440
-        X: =94
-        Y: =209
+        X: =122
+        Y: =669
         ZIndex: =8
 
     Icon4 As icon.Leave:
