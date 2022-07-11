@@ -1,4 +1,6 @@
 Start As screen:
+    Height: =Max(App.Height)
+    Width: =Max(App.Width)
 
     Image3 As image:
         Height: =1136
@@ -173,8 +175,7 @@ Start As screen:
         Tooltip: ="Empezar"
         Visible: =If( !IsBlank(UserData), true, false)
         Width: =440
-        X: =94
-        Y: =682
+        Y: =639
         ZIndex: =8
 
     Icon4 As icon.Leave:
