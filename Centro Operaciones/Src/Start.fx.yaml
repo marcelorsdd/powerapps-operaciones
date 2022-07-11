@@ -141,3 +141,16 @@ Start As screen:
         Y: =47
         ZIndex: =10
 
+    Label8 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Lato Light'
+        FontWeight: =FontWeight.Semibold
+        Height: =44
+        Size: =16
+        Text: |-
+            ="App Versión: " & _MyVersions
+        Width: =170
+        Y: =1092
+        ZIndex: =12
+

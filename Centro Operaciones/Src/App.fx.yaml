@@ -91,5 +91,10 @@ App As appinfo:
                 Title: "Subárea",
                 Icon: Icon.Location
             }
-        )
+        );
+        
+        ClearCollect(colAppVersions,PowerAppsparaFabricantes.GetAppVersions(GUID("fb028c7c-8a2d-4fae-acc1-a984282f086b")));
+        ClearCollect(colAppVersionsUngrouped,Ungroup(colAppVersions,"value"));
+        Set(_MyVersions,CountRows(colAppVersionsUngrouped));
+        Set(_VersionDate,LookUp(Ungroup(colAppVersions,"value"),properties.lifeCycleId="Published").properties.appVersion)
 

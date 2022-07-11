@@ -51,7 +51,7 @@
         "Name": "Rectangle3",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 96,
+        "PublishOrderIndex": 98,
         "Rules": [
           {
             "Category": "Design",
@@ -207,7 +207,7 @@
         "Name": "Image12",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 97,
+        "PublishOrderIndex": 99,
         "Rules": [
           {
             "Category": "Data",
@@ -485,7 +485,7 @@
         "Name": "Label2",
         "Parent": "Loading",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 98,
+        "PublishOrderIndex": 100,
         "Rules": [
           {
             "Category": "Data",
