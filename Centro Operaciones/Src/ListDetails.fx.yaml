@@ -36,7 +36,6 @@ ListDetails As screen:
 
     Gallery3 As gallery.galleryVertical:
         Height: =880
-        Items: =CustomGallerySample
         Layout: =Layout.Vertical
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
         Width: =591
