@@ -35,14 +35,14 @@ ListDetails As screen:
         ZIndex: =7
 
     Gallery3 As gallery.galleryVertical:
-        Height: =843
+        Height: =832
         Items: ='CO-VHO-Control de combustible'
         Layout: =Layout.Vertical
         ShowScrollbar: =false
         TemplateSize: =46
         Width: =591
         X: =25
-        Y: =168
+        Y: =178
         ZIndex: =13
 
         Label4 As label:
